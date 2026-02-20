@@ -1,0 +1,26 @@
+let mapleader = ' '
+
+" Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+
+" Enable relative line numbers
+set relativenumber
+
+" Enable incremental search
+set incsearch
+
+" Enable case-insensitive search
+set smartcase
+
+" Show lines above and below cursor
+set scrolloff=5
+
+" Use clipboard as default buffer
+set clipboard+=unnamedplus
+
+" Jetbrains IDE
+map <leader>f <Action>(OptimizeImports)<Action>(ReformatCode)
+map <leader>s <Action>(SelectInProjectView)
+map <leader>b <Action>(ToggleLineBreakpoint)
