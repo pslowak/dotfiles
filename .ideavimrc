@@ -24,3 +24,4 @@ set clipboard+=unnamedplus
 map <leader>f <Action>(OptimizeImports)<Action>(ReformatCode)
 map <leader>s <Action>(SelectInProjectView)
 map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>d <Action>(Debug)
