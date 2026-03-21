@@ -12,6 +12,7 @@ set relativenumber
 set incsearch
 
 " Enable case-insensitive search
+set ignorecase
 set smartcase
 
 " Show lines above and below cursor
