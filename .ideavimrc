@@ -23,6 +23,7 @@ set clipboard+=unnamedplus
 
 " Jetbrains IDE
 map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>c <Action>(IntroduceConstant)
 map <leader>d <Action>(Debug)
 map <leader>f <Action>(OptimizeImports)<Action>(ReformatCode)
 map <leader>m <Action>(ExtractMethod)
