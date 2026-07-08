@@ -2,6 +2,7 @@ let mapleader = ' '
 
 " Plugins
 Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
@@ -21,7 +22,10 @@ set scrolloff=5
 " Use clipboard as default buffer
 set clipboard+=unnamedplus
 
-" Jetbrains IDE
+" Nerdtree settings
+map <leader>n :NERDTree<CR>
+
+" Jetbrains Actions
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>c <Action>(IntroduceConstant)
 map <leader>d <Action>(Debug)
