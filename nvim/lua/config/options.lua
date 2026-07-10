@@ -5,6 +5,7 @@ opt.cursorline = true
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 5
+opt.signcolumn = "yes"
 opt.termguicolors = true
 
 -- Indenting
