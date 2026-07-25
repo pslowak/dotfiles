@@ -23,6 +23,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      vim.lsp.config["lua_ls"] = {
+        settings = {
+          Lua = {
+            diagnostics = { globals = { "vim" } },
+          },
+        },
+      }
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local bufopts = { buffer = args.buf }
