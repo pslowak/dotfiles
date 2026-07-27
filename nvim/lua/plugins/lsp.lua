@@ -36,7 +36,7 @@ return {
           local map = function(mode, lhs, rhs, desc)
             vim.keymap.set(mode, lhs, rhs, vim.tbl_extend("force", bufopts, { desc = desc }))
           end
-          map("n", "K", vim.lsp.buf.hover, "Hover")
+          map("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, "Hover")
           map("n", "gd", vim.lsp.buf.definition, "Go to definition")
           map("n", "gD", vim.lsp.buf.declaration, "Go to declaration")
           map("n", "gi", vim.lsp.buf.implementation, "Go to implementation")
