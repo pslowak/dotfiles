@@ -6,31 +6,40 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
-" Enable relative line numbers
+" Editor
 set relativenumber
-
-" Enable incremental search
 set incsearch
-
-" Enable case-insensitive search
 set ignorecase
 set smartcase
-
-" Show lines above and below cursor
 set scrolloff=5
-
-" Use clipboard as default buffer
 set clipboard+=unnamedplus
 
-" Nerdtree settings
+" Navigation
+map gd <Action>(GotoDeclaration)
+map gD <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
+map gr <Action>(FindUsages)
 map <leader>n :NERDTree<CR>
+map <leader>s <Action>(SelectInProjectView)
 
-" Jetbrains Actions
-map <leader>b <Action>(ToggleLineBreakpoint)
+" Tabs
+map <leader>w <Action>(CloseContent)
+
+" Refactoring
 map <leader>c <Action>(IntroduceConstant)
-map <leader>d <Action>(Debug)
-map <leader>f <Action>(OptimizeImports)
 map <leader>m <Action>(ExtractMethod)
 map <leader>rn <Action>(RenameElement)
-map <leader>s <Action>(SelectInProjectView)
+map <leader>f <Action>(OptimizeImports)
+
+" Diagnostics
+map K <Action>(QuickJavaDoc)
+map gl <Action>(ShowErrorDescription)
+map [d <Action>(GotoPreviousError)
+map ]d <Action>(GotoNextError)
+
+" Debugging
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>d <Action>(Debug)
+
+" Tools
 map <leader>t <Action>(ActivateTerminalToolWindow)
