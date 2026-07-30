@@ -28,3 +28,11 @@ opt.splitright = true
 
 -- Persistence
 opt.undofile = true
+
+-- Yank highlight
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+  end,
+})
+
