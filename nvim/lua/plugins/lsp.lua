@@ -47,7 +47,7 @@ return {
           map({ "n", "x" }, "<leader>cr", vim.lsp.buf.rename, "Rename")
           map("n", "[d", function() vim.diagnostic.jump({ count = -1 }) end, "Prev diagnostic")
           map("n", "]d", function() vim.diagnostic.jump({ count = 1 }) end, "Next diagnostic")
-          map("n", "gl", vim.diagnostic.open_float, "Line diagnostic")
+          map("n", "<leader>cd", vim.diagnostic.open_float, "Line diagnostic")
         end,
       })
     end,
