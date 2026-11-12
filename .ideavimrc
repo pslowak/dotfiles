@@ -17,7 +17,8 @@ set clipboard+=unnamedplus
 " Navigation
 map gd <Action>(GotoDeclaration)
 map gD <Action>(GotoDeclaration)
-map gi <Action>(GotoImplementation)
+map gI <Action>(GotoImplementation)
+map gy <Action>(GotoTypeDeclaration)
 map gr <Action>(FindUsages)
 map <leader>n :NERDTree<CR>
 map <leader>s <Action>(SelectInProjectView)
@@ -25,15 +26,19 @@ map <leader>s <Action>(SelectInProjectView)
 " Tabs
 map <leader>w <Action>(CloseContent)
 
+" Code
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cr <Action>(RenameElement)
+map <leader>co <Action>(OptimizeImports)
+
 " Refactoring
-map <leader>c <Action>(IntroduceConstant)
-map <leader>m <Action>(ExtractMethod)
-map <leader>rn <Action>(RenameElement)
-map <leader>f <Action>(OptimizeImports)
+map <leader>rc <Action>(IntroduceConstant)
+map <leader>rm <Action>(ExtractMethod)
 
 " Diagnostics
 map K <Action>(QuickJavaDoc)
-map gl <Action>(ShowErrorDescription)
+map gK <Action>(ParameterInfo)
+map <leader>cd <Action>(ShowErrorDescription)
 map [d <Action>(GotoPreviousError)
 map ]d <Action>(GotoNextError)
 
