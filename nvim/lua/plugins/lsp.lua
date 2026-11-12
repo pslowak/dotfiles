@@ -37,6 +37,7 @@ return {
             vim.keymap.set(mode, lhs, rhs, vim.tbl_extend("force", bufopts, { desc = desc }, opts or {}))
           end
           map("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, "Hover")
+          map("n", "gK", function() vim.lsp.buf.signature_help({ border = "rounded" }) end, "Signature help")
           map("n", "gd", vim.lsp.buf.definition, "Go to definition")
           map("n", "gD", vim.lsp.buf.declaration, "Go to declaration")
           map("n", "gI", vim.lsp.buf.implementation, "Go to implementation")
