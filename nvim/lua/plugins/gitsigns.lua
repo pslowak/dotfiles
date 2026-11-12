@@ -15,7 +15,7 @@ return {
         vim.keymap.set("n", "<leader>hS", gs.stage_buffer, { buffer = bufnr, desc = "Stage buffer" })
         vim.keymap.set("n", "<leader>hp", gs.preview_hunk, { buffer = bufnr, desc = "Preview hunk" })
         vim.keymap.set("n", "<leader>hb", gs.blame_line, { buffer = bufnr, desc = "Blame line" })
-        vim.keymap.set("n", "<leader>hd", gs.diffthis, { buffer = bufnr, desc = "Diff this" })
+        vim.keymap.set("n", "<leader>hd", function() gs.diffthis("HEAD") end, { buffer = bufnr, desc = "Diff against last commit" })
       end,
     },
   },
