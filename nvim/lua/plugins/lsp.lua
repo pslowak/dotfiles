@@ -39,7 +39,7 @@ return {
           map("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, "Hover")
           map("n", "gd", vim.lsp.buf.definition, "Go to definition")
           map("n", "gD", vim.lsp.buf.declaration, "Go to declaration")
-          map("n", "gi", vim.lsp.buf.implementation, "Go to implementation")
+          map("n", "gI", vim.lsp.buf.implementation, "Go to implementation")
           map("n", "gr", vim.lsp.buf.references, "References", { nowait = true })
           map("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
           map({ "n", "x" }, "<leader>rn", vim.lsp.buf.rename, "Rename")
