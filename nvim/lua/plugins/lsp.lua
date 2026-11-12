@@ -44,7 +44,7 @@ return {
           map("n", "gy", vim.lsp.buf.type_definition, "Go to type definition")
           map("n", "gr", vim.lsp.buf.references, "References", { nowait = true })
           map("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
-          map({ "n", "x" }, "<leader>rn", vim.lsp.buf.rename, "Rename")
+          map({ "n", "x" }, "<leader>cr", vim.lsp.buf.rename, "Rename")
           map("n", "[d", function() vim.diagnostic.jump({ count = -1 }) end, "Prev diagnostic")
           map("n", "]d", function() vim.diagnostic.jump({ count = 1 }) end, "Next diagnostic")
           map("n", "gl", vim.diagnostic.open_float, "Line diagnostic")
