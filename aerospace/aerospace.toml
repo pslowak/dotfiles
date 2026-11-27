@@ -154,7 +154,7 @@ gaps.outer.right =      0
     alt-q = 'workspace Q'
     alt-r = 'workspace R'
     alt-s = 'workspace S'
-    alt-t = 'workspace T'
+    alt-t = ['workspace T', 'exec-and-forget open -a Ghostty'] # go to T, launch Ghostty if not running
     alt-u = 'workspace U'
     alt-v = 'workspace V'
     alt-w = 'workspace W'
@@ -218,3 +218,8 @@ gaps.outer.right =      0
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+# Fixed workspaces per app. Find app ids with: aerospace list-apps
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
