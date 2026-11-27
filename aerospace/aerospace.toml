@@ -145,7 +145,7 @@ gaps.outer.right =      0
     alt-d = 'workspace D'
     alt-e = 'workspace E'
     alt-f = 'workspace F'
-    alt-g = 'workspace G'
+    alt-g = ['workspace G', 'exec-and-forget open -a GoLand'] # go to G, launch GoLand if not running
     alt-i = ['workspace I', 'exec-and-forget open -a "IntelliJ IDEA"'] # go to I, launch IntelliJ if not running
     alt-m = 'workspace M'
     alt-n = 'workspace N'
@@ -227,3 +227,7 @@ run = 'move-node-to-workspace T'
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.intellij'
 run = 'move-node-to-workspace I'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.goland'
+run = 'move-node-to-workspace G'
