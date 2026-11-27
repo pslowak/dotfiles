@@ -146,7 +146,7 @@ gaps.outer.right =      0
     alt-e = 'workspace E'
     alt-f = 'workspace F'
     alt-g = 'workspace G'
-    alt-i = 'workspace I'
+    alt-i = ['workspace I', 'exec-and-forget open -a "IntelliJ IDEA"'] # go to I, launch IntelliJ if not running
     alt-m = 'workspace M'
     alt-n = 'workspace N'
     alt-o = 'workspace O'
@@ -223,3 +223,7 @@ gaps.outer.right =      0
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij'
+run = 'move-node-to-workspace I'
