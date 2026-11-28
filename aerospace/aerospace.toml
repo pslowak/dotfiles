@@ -140,7 +140,7 @@ gaps.outer.right =      0
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
     alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-    alt-b = 'workspace B'
+    alt-b = ['workspace B', 'exec-and-forget open -a "Google Chrome"'] # go to B, launch Chrome if not running
     alt-c = 'workspace C'
     alt-d = 'workspace D'
     alt-e = 'workspace E'
@@ -235,3 +235,7 @@ run = 'move-node-to-workspace G'
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.pycharm'
 run = 'move-node-to-workspace P'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace B'
