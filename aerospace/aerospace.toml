@@ -147,7 +147,7 @@ gaps.outer.right =      0
     alt-f = 'workspace F'
     alt-g = ['workspace G', 'exec-and-forget open -a GoLand'] # go to G, launch GoLand if not running
     alt-i = ['workspace I', 'exec-and-forget open -a "IntelliJ IDEA"'] # go to I, launch IntelliJ if not running
-    alt-m = 'workspace M'
+    alt-m = ['workspace M', 'exec-and-forget open -a Spotify'] # go to M, launch Spotify if not running
     alt-n = 'workspace N'
     alt-o = 'workspace O'
     alt-p = ['workspace P', 'exec-and-forget open -a PyCharm'] # go to P, launch PyCharm if not running
@@ -239,3 +239,7 @@ run = 'move-node-to-workspace P'
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace M'
